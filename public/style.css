@@ -54,5 +54,22 @@ header{
 }
 .result{
   text-align:center;
-  font-
+  font-size:24px;
+  color:#fff;
+  text-shadow:1px 1px 2px rgba(0,0,0,0.5);
+  margin:10px auto;
+}
+button#reset{
+  display:block;
+  margin:0 auto;
+  padding:10px 20px;
+  font-size:18px;
+  background-color:#000;
+  color:#fff;
+  cursor:pointer;
+  transition:background-color 0.3s,color 0.3s;
+}
+button#reset:hover{
+  background-color:#fff;
+  color:#000;
 }
