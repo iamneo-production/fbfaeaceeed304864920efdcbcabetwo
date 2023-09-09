@@ -82,7 +82,14 @@ const resetGame = () => {
 
     // Your code to re-enable buttons
     // ...
-    cells=[","]
+    cells=[",",",",",",",","];
+    currentPlayer='X';
+    gameOver=false;
+    result.textContext="Player X's Turn";
+    btns.forEach(btn=>{
+        btn.textContent=";
+        btn.classList.remove('disabled');
+    });
 };
 
 btns.forEach((btn, i) => {
@@ -90,3 +97,5 @@ btns.forEach((btn, i) => {
 });
 
 document.querySelector('#reset').addEventListener('click', resetGame);
+// initial setup
+result.textContent="player X's Turn";
