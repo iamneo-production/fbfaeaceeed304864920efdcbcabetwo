@@ -16,8 +16,11 @@ let conditions = [
 // Function to check for a win function checkWin(){
     for(const condition of conditions){
         const[a,b,c]=condition;
-        if(cells[a]&& cells)
+        if(cells[a]&& cells[a]===cells[b]&&cells[a]===cells[c]){
+            return true;
+        }
     }
+    return false;
 }
 
 // Function to handle player moves
@@ -40,6 +43,17 @@ const ticTacToe = (element, index) => {
 
     // Your code to handle button and cell interactions
     // ...
+    if(!cells[index]&&!gameOver){
+        cells[index]=currentPlayer;
+        element.textContent=currentPlayer;
+        element.vlassList.add('disabled');
+            if(checkWin()){
+                result.textContent='$
+                {currentPlayer
+
+                }
+            }
+    }
 };
 
     /*
