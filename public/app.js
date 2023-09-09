@@ -49,8 +49,15 @@ const ticTacToe = (element, index) => {
         element.vlassList.add('disabled');
             if(checkWin()){
                 result.textContent='$
-                {currentPlayer
-
+                {currentPlayer}wins!;
+                    gameOver=true;
+                }lese if(cells.every(cell=>cell!==")){
+                    result.textContent="it's a draw!";
+                    gameOver=true;
+                }else{
+                    currentPlayer=currentPlayer==='X'?'O':'X';
+                    result.textContent='Player ${currentPlayer}'s Turn;
+                }
                 }
             }
     }
@@ -75,6 +82,7 @@ const resetGame = () => {
 
     // Your code to re-enable buttons
     // ...
+    cells=[","]
 };
 
 btns.forEach((btn, i) => {
